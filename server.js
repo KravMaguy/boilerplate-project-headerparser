@@ -26,7 +26,9 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get('/api/whoami', function(req, res){
-  res.json({test:'test'})
+  let response={}
+  response.ipaddress=req.ip
+  res.json(response)
 })
 
 
